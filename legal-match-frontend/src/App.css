@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Change to a modern font */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+.light-mode {
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #222;
+  color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #6d717a;
+  color: white;
+  border-bottom: 2px solid #e2e2e2;
+  position: static;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.legal-icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Input Elements */
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Disabled button styles */
+.btn:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Recommend Button */
+.btn.recommend {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Predict Button */
+.btn.predict {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Result Section */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Case Type Dropdown */
+.case-type-dropdown {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease-in-out;
+}
+
+.lawyer-description {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.lawyer-description h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.lawyer-description p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+.case-type-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Error Message */
+.validation-error {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Dark Mode Tweaks */
+.dark-mode .navbar {
+  background: #444;
+}
+
+.dark-mode .result {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .btn {
+  color: black;
+}
+
+.dark-mode .container {
+  background: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Transitions */
+input, textarea, select, .btn {
+  transition: all 0.3s ease;
+}
+
+/* Add these styles to your App.css */
+.lawyer-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.lawyer-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lawyer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.lawyer-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.lawyer-specialization {
+  color: var(--text-secondary);
+  margin: 0.25rem 0;
+}
+
+.rating {
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lawyer-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.lawyer-stats {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.success-rate {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Dark mode variables */
+:root {
+  --card-bg: #fff;
+  --text-secondary: #666;
+  --border-color: #eee;
+}
+
+.dark {
+  --card-bg: #2d3748;
+  --text-secondary: #a0aec0;
+  --border-color: #4a5568;
+}
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .lawyer-description {
+    background-color: #6b68759e;
+    color: #e0e0e0;
+  }
+
+  .lawyer-description h4 {
+    color: #ffffff;
+  }
+
+  .lawyer-description p {
+    color: #b0b0b0;
+  }
+}
